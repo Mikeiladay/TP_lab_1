@@ -2,7 +2,7 @@
 
 #pragma once
 class FamilyMember :
-    public Base
+	public Base
 {
 private:
 	string FIO, fatherFIO, matherFIO, spouseFIO, birthDate, dieDate;
@@ -18,7 +18,10 @@ public:
 	FamilyMember(const FamilyMember& familyMember);
 	~FamilyMember();
 
+	virtual void inputFromFile(std::ifstream& file, std::string& tmpS);
 	virtual void printToConsole();
+	virtual void printToFile(ostream& out);
+	virtual void change();
 
 	string getFIO() { return FIO; }
 	void setFIO(string FIO) { this->FIO = FIO; }
@@ -33,7 +36,7 @@ public:
 	void setSpouseFIO(string spouseFIO) { this->spouseFIO = spouseFIO; }
 
 	string getBirthDate() { return birthDate; }
-	void setBirthDate(string FIObirthDate) { this->birthDate = birthDate; calculateAge();  }
+	void setBirthDate(string FIObirthDate) { this->birthDate = birthDate; calculateAge(); }
 
 	string getDieDate() { return dieDate; }
 	void setDieDate(string dieDate) { this->dieDate = dieDate; calculateAge(); }

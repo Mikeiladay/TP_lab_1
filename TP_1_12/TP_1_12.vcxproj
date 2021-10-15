@@ -140,14 +140,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Base.cpp" />
+    <ClCompile Include="checkInput.cpp" />
     <ClCompile Include="FamilyMember.cpp" />
     <ClCompile Include="Keeper.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
+    <ClInclude Include="checkInput.h" />
     <ClInclude Include="FamilyMember.h" />
     <ClInclude Include="Keeper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="save.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

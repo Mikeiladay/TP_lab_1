@@ -16,6 +16,8 @@ public:
 	void add(Base* base);
 	void del(int index);
 	Base* operator[](int index);
+	void inputFromFile();
+	void printToFile();
 	void printToConsole();
 
 	int getSize() { return size; }
