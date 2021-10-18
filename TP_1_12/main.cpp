@@ -77,9 +77,9 @@ void addFamilyMember(Keeper& keeper)
 
 	cout << "Введите ФИО члена семьи: ";
 	getline(cin, FIO);
-	cout << "Введите ФИО родителя 1 члена семьи: ";
+	cout << "Введите ФИО отца: ";
 	getline(cin, fatherFIO);
-	cout << "Введите ФИО родителя 2 члена семьи: ";
+	cout << "Введите ФИО матери: ";
 	getline(cin, matherFIO);
 	cout << "Введите ФИО супруга(и) члена семьи: ";
 	getline(cin, spouseFIO);
@@ -100,7 +100,7 @@ void addFamilyMember(Keeper& keeper)
 	for (int i = 0; i < countChildrens; i++)
 	{
 		cout << "Введите ФИО " << i + 1 << " ребенка: ";
-		cin >> childrens[i];
+		getline(cin, childrens[i]);
 	}
 	Base* familyMember = new FamilyMember(FIO, fatherFIO, matherFIO, spouseFIO,
 		childrens, countChildrens, birthDate, dieDate);
